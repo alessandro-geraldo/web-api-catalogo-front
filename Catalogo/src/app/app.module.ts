@@ -9,6 +9,8 @@ import { CategoriaNovaComponent } from './components/categoria-nova/categoria-no
 import { CategoriaEditarComponent } from './components/categoria-editar/categoria-editar.component';
 import { LoginComponent } from './components/login/login.component';
 import { LogoutComponent } from './components/logout/logout.component';
+import { TestandoComponent } from './testando/testando.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 @NgModule({
   declarations: [
@@ -18,13 +20,16 @@ import { LogoutComponent } from './components/logout/logout.component';
     CategoriaNovaComponent,
     CategoriaEditarComponent,
     LoginComponent,
-    LogoutComponent
+    LogoutComponent,
+    TestandoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
