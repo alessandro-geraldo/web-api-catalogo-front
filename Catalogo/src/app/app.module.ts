@@ -11,6 +11,14 @@ import { LoginComponent } from './components/login/login.component';
 import { LogoutComponent } from './components/logout/logout.component';
 import { TestandoComponent } from './testando/testando.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatMenuModule} from '@angular/material/menu';
+import { MenuComponent } from './menu/menu.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -21,11 +29,19 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     CategoriaEditarComponent,
     LoginComponent,
     LogoutComponent,
-    TestandoComponent
+    TestandoComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatMenuModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
   ],
   providers: [
     provideAnimationsAsync()
